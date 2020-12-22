@@ -1,0 +1,40 @@
+<div class="container-fluid"></div>
+<div class="row bg-primary text-white">
+	<div class="col-sm-12">
+		<h2 class="text-center">Count Down Dashboard</h2>
+	</div>
+</div>
+<div class="container">
+	<div class="row my-5">
+		<div class="col-sm-12 col-md-8 col-lg-6 m-auto">
+			<div class="card text-center">
+				<div class="card-header">
+					Count Down Timer
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-sm-12 col-md-6 col-lg-6 m-auto p-4">
+							<form>
+								<input type="datetime-local" id="datetime" name="datetime" [(ngModel)]="datetime">
+							</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<!-- <span id="days" class="text-primary p-2"> {{daysToDday}} </span>Day(s) -->
+							<span id="hours" class="text-primary p-4"> {{hoursToDday}} Hrs</span>
+							<span id="minutes" class="text-info p-4"> {{minutesToDday}} Min</span>
+							<span id="seconds" class="text-success p-4"> {{secondsToDday}} Sec</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer text-muted">
+					<button class="btn btn-success btn-sm m-2" (click)="startCountDown()" [disabled]="!datetime">Start</button>
+					<button class="btn btn-danger btn-sm m-2" (click)="stopCountDown()" [disabled]="!datetime">Stop</button>
+					<button class="btn btn-info btn-sm m-2" (click)="resetCountDown()" [disabled]="!datetime">Reset</button>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
